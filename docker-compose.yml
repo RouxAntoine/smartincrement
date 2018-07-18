@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  go:
+    build:
+      context: .
+      args:
+        - PROJECT_NAME=${PROJECT_NAME}
+    environment:
+      - TZ=Europe/Paris
+      - PROGRAM_ARG=-db=./${PROJECT_NAME}/smartincrement.db -inc -config=./${PROJECT_NAME}/smart.toml
+    container_name: ${PROJECT_NAME}
+    volumes:
+      - gopath:/go
+      - ./projects/bin:/go/bin
+      - ./projects/${PROJECT_NAME}:/go/src/${PROJECT_NAME}
+
+volumes:
+  gopath:

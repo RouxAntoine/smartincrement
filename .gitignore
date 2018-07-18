@@ -1,0 +1,7 @@
+
+
+projects/bin/*
+projects/test/*
+*.iml
+
+!*.gitkeep
