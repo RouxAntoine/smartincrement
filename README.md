@@ -23,4 +23,19 @@ bindcode 122 exec --no-startup-id "/bin/perso/soundManager.sh down"
 bindcode 123 exec --no-startup-id "/bin/perso/soundManager.sh up"
 ```
 
+### lancer le programme avec docker
+
+```
+git clone ...
+cd XXX
+
+make
+
+```
+
+si l'on souhaite lancer un autre projet qui doit être présent dans le dossier project :
+
+`make PROJECT_NAME=smartincrement`
+
+
 
